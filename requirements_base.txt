@@ -1,3 +1,5 @@
+git+https://github.com/R3gm/whisperX.git@cuda_12_x
+git+https://github.com/R3gm/pyannote-audio.git@3.1.1
 #!pip uninstall tokenizers -y
 pip install --upgrade faster-whisper==1.0.0
 #!pip install --upgrade gruut
