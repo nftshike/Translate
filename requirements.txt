@@ -18,7 +18,7 @@ gTTS
 gdown
 rarfile
 IPython
-transformers
+#transformers
 accelerate
 optimum
 sentencepiece
