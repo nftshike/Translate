@@ -1,3 +1,3 @@
 pip install --upgrade gruut
 pip install --upgrade networkx==3.2
-!pip install --upgrade numpy==1.26.4
+pip install --upgrade numpy==1.26.4
