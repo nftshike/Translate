@@ -1,17 +1,73 @@
---extra-index-url https://download.pytorch.org/whl/cu118
-torch>=2.1.0+cu118
-torchvision>=0.16.0+cu118
-torchaudio>=2.1.0+cu118
-ctranslate2<=4.4.0
-yt-dlp
-gradio==4.19.2
-pydub==0.25.1
-edge_tts==6.1.7
-deep_translator==1.11.4
-git+https://github.com/R3gm/pyannote-audio.git@3.1.1
-git+https://github.com/R3gm/whisperX.git@cuda_11_8
-nest_asyncio
-gTTS
-gradio_client==0.10.1
-IPython
-fastapi==0.112.2
+#!pip uninstall tokenizers -y
+pip install --upgrade faster-whisper==1.0.0
+#!pip install --upgrade gruut
+#!pip install sentence-transformers==4.0.0
+# core deps
+pip install chex>=0.1.87
+#!pip install --upgrade networkx==3.2
+#!pip install numpy==1.19.0
+
+# Now, address the transformers/tokenizers/faster-whisper conflict.
+# Choose either Option A (downgrade transformers) or Option B (upgrade faster-whisper and tokenizers).
+# Option B is often more feasible if newer versions are available.
+
+# Option B example:
+#!pip install tokenizers==0.21.1
+pip install cython>=0.29.30
+pip install scipy>=1.11.2
+pip install soundfile
+pip install librosa
+pip install scikit-learn
+pip install numba
+pip install inflect>=5.6.0
+pip install tqdm>=4.64.1
+pip install anyascii>=0.3.0
+pip install pyyaml>=6.0
+pip install fsspec>=2023.6.0
+pip install aiohttp>=3.8.1
+pip install packaging>=23.1
+
+# deps for examples
+pip install flask>=2.0.1
+
+# deps for inference
+pip install pysbd>=0.3.4
+
+# deps for notebooks
+pip install umap-learn>=0.5.1
+pip install pandas
+
+# deps for training
+pip install matplotlib
+
+# coqui stack
+pip install trainer>=0.0.32
+# config management
+pip install coqpit>=0.0.16
+
+# chinese g2p deps
+pip install jieba
+pip install pypinyin
+
+# korean
+pip install hangul_romanize
+pip install gruut[de,es,fr]==2.0.3
+# deps for korean
+pip install jamo
+pip install nltk
+pip install g2pkk>=0.1.1
+# deps for bangla
+pip install bangla
+pip install bnnumerizer
+pip install bnunicodenormalizer
+# deps for tortoise
+pip install einops>=0.6.0
+#!pip install transformers
+
+# deps for bark
+pip install encodec>=0.1.1
+
+# deps for XTTS
+pip install unidecode>=1.3.2
+pip install num2words
+pip install "spacy[ja]>=3"
